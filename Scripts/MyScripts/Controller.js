@@ -4,7 +4,7 @@
 /// <reference path="Services.js" /> 
 
 // controller for add estimate page
-app.controller("AddEstimate_Controller", function ($scope, AngularJs_Service) {
+app.controller("AddEstimate_Controller", function ($scope, EstimateProj_Service) {
   
     $scope.OperType = 1;
     $scope.client = "";
@@ -14,7 +14,7 @@ app.controller("AddEstimate_Controller", function ($scope, AngularJs_Service) {
     function GetMasterData() {
         $scope.CurrDate = new Date();
 
-        var promisemaster = AngularJs_Service.getClientMaster();
+        var promisemaster = EstimateProj_Service.getClientMaster();
         promisemaster.then(function (response) {
             $scope.clientdata = response.data.ClientName;
 
@@ -23,7 +23,7 @@ app.controller("AddEstimate_Controller", function ($scope, AngularJs_Service) {
         });
         
 
-        var promisemaster1 = AngularJs_Service.getBrandMaster();
+        var promisemaster1 = EstimateProj_Service.getBrandMaster();
         promisemaster1.then(function (response) {
             $scope.branddata = response.data.BrandName;
 
@@ -69,7 +69,7 @@ app.controller("AddEstimate_Controller", function ($scope, AngularJs_Service) {
             podate: $scope.EstDate
         };  
         if ($scope.OperType === 1) {  
-            var promisePost = AngularJs_Service.post(Estimate);  
+            var promisePost = EstimateProj_Service.post(Estimate);  
             promisePost.then(function (response) {
               //  $scope.StudentID = response.data.StudentID;
                // GetAllRecords();  
@@ -103,7 +103,7 @@ app.controller("Scheduling_Controller", function ($scope, $routeParams, $route, 
             EstimateId : $routeParams.estimateid
         };
         if ($scope.OperType === 1) {
-            var promisePost = AngularJs_Service.scheduling(Schedule);
+            var promisePost = EstimateProj_Service.scheduling(Schedule);
             promisePost.then(function (response) {
                // $scope.StudentID = response.data.StudentID;
                // GetAllRecords();
@@ -124,7 +124,7 @@ app.controller("GetEstimates_Controller", function ($scope, AngularJs_Service) {
     GetAllRecords();
     var listcount;
     function GetAllRecords() {
-        var promiseGet = AngularJs_Service.getAllEstimate();
+        var promiseGet = EstimateProj_Service.getAllEstimate();
         promiseGet.then(function (pl) {
             $scope.Estimates = pl.data;
             listcount = p1.data.length;
@@ -144,7 +144,7 @@ app.controller("GetEstimates_Controller", function ($scope, AngularJs_Service) {
 //controller for editions list page
 app.controller("Editions_Controller", function ($scope, AngularJs_Service) {
 
-    var promiseGet = AngularJs_Service.getAllEdition();
+    var promiseGet = EstimateProj_Service.getAllEdition();
     promiseGet.then(function (pl) {
         $scope.Editions = pl.data;
         listcount = p1.data.length;
