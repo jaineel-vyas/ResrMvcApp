@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b9ddf57b-c5ed-4955-9820-cadd9bfa6aa6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:5327/EstimateService1.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EstimateService1.wsdl" MetadataType="Wsdl" ID="8bae4372-8cee-4a8c-9f27-04de125f910a" SourceId="1" SourceUrl="http://localhost:5327/EstimateService1.svc?wsdl" />
+    <MetadataFile FileName="EstimateService1.xsd" MetadataType="Schema" ID="9964ae5b-fe71-4aa6-aaa2-19e9aab51519" SourceId="1" SourceUrl="http://localhost:5327/EstimateService1.svc?xsd=xsd0" />
+    <MetadataFile FileName="EstimateService1.disco" MetadataType="Disco" ID="b998c1bd-c07e-4880-a26b-a6fe0e263fee" SourceId="1" SourceUrl="http://localhost:5327/EstimateService1.svc?disco" />
+    <MetadataFile FileName="EstimateService11.xsd" MetadataType="Schema" ID="cd86432f-e9ab-4657-93db-0eb707922e22" SourceId="1" SourceUrl="http://localhost:5327/EstimateService1.svc?xsd=xsd2" />
+    <MetadataFile FileName="EstimateService12.xsd" MetadataType="Schema" ID="559f008c-a6fc-4efd-bdaa-a4368b4a0fcd" SourceId="1" SourceUrl="http://localhost:5327/EstimateService1.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

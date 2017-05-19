@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EstimateService1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:5327/EstimateService1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:5327/EstimateService1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:5327/EstimateService1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService1" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEstimateService1_GetClientMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientMaster" />
+  </wsdl:message>
+  <wsdl:message name="IEstimateService1_GetClientMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstimateService1_GetBrandMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrandMaster" />
+  </wsdl:message>
+  <wsdl:message name="IEstimateService1_GetBrandMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrandMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstimateService1_GetAllEstimate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEstimate" />
+  </wsdl:message>
+  <wsdl:message name="IEstimateService1_GetAllEstimate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEstimateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstimateService1_AddNewEstimate_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewEstimate" />
+  </wsdl:message>
+  <wsdl:message name="IEstimateService1_AddNewEstimate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewEstimateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEstimateService1">
+    <wsdl:operation name="GetClientMaster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstimateService1/GetClientMaster" message="tns:IEstimateService1_GetClientMaster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstimateService1/GetClientMasterResponse" message="tns:IEstimateService1_GetClientMaster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandMaster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstimateService1/GetBrandMaster" message="tns:IEstimateService1_GetBrandMaster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstimateService1/GetBrandMasterResponse" message="tns:IEstimateService1_GetBrandMaster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEstimate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstimateService1/GetAllEstimate" message="tns:IEstimateService1_GetAllEstimate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstimateService1/GetAllEstimateResponse" message="tns:IEstimateService1_GetAllEstimate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewEstimate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstimateService1/AddNewEstimate" message="tns:IEstimateService1_AddNewEstimate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstimateService1/AddNewEstimateResponse" message="tns:IEstimateService1_AddNewEstimate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="EstimateService1" />
+</wsdl:definitions>

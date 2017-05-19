@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <input ng-model="searchtext"/>
+
+     <table id="mytable" class="table table-striped">
+      <thead>
+        <tr class="table-head">
+          <th>Select</th>
+           <th ng-click="columnname='EstimateNo'; sortReverse='!sortReverse'">Estimate No</th>
+            <th ng-click="columnname='PeriodFrom'; sortReverse='!sortReverse'">Period From</th>
+            <th ng-click="columnname='PeriodTo'; sortReverse='!sortReverse'">Period To</th>
+            <th ng-click="columnname='ClientID'; sortReverse='!sortReverse'">Client</th>
+            <th ng-click="columnname='BrandID'; sortReverse='!sortReverse'">Brand</th>
+            <th ng-click="columnname='TotalCost'; sortReverse='!sortReverse'">Total Cost</th>
+            <th ng-click="columnname='Status'; sortReverse='!sortReverse'">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr dir-paginate="estimate in  Estimates | orderBy: columnname : sortReverse | filter : searchtext | itemsPerPage:5" >
+          <td>{{estimate.EstimateNo}}</td>
+          <td>{{estimate.PeriodFrom}}</td>
+          <td>{{estimate.PeriodTo}}</td>
+          <td>{{estimate.ClientID}}</td>
+          <td>{{estimate.BrandID}}</td>
+          <td>{{estimate.TotalCost}}</td>
+          <td>{{estimate.Status}}</td>
+        </tr>
+      </tbody>
+    </table>
+      <dir-pagination-controls
+       max-size="5"
+       direction-links="true"
+       boundary-links="true" >
+    </dir-pagination-controls> 
+
+
+    <button id="createnew" onclick="createnew()">Create New</button>
+
+
+    <script>
+        function createnew()
+        {
+            location.href = "#!/addestimate";
+        }
+    </script>
+
+</body>
+</html>

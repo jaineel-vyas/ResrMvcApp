@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <table id="tblContainer" >  
+        
+<tr>  
+            <td>  
+              <!--  <div style="color: red;">{{Message}}</div>  -->
+                <table style="border: solid 4px Red; padding: 2px;">  
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>Campaign</span>  
+                        </td>  
+                        <td>  
+                            <input type="text" id="CampaignName"  data-ng-model="CampaignName" />  
+                        </td>  
+                    </tr>  
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>Agency</span>  
+                        </td>  
+                        <td>  
+                            <input type="text" id="AgencyName" required data-ng-model="AgencyName" />  
+                        </td>  
+                    </tr>  
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>Period From</span>  
+                        </td>  
+                        <td>  
+                            <input type="date" id="PeriodFrom" required data-ng-model="PeriodFrom" />  
+                        </td>  
+                    </tr>  
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>Period To</span>  
+                        </td>  
+                        <td>  
+                            <input type="date" id="PeriodTo" required data-ng-model="PeriodTo" />  
+                        </td>  
+                    </tr>  
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <!--<span>Client</span>  -->
+                        </td>  
+                        <td>  
+                          <!--  <input type="text" id="ClientName" required data-ng-model="ClientName" />  -->
+                            
+                              <!--  <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        
+                         <span class="caret">Client</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li ng-repeat="a in clientdata"><a ng-click="clientselected(a)">{{a}}</a></li>
+                        </ul>
+                      </div> -->
+                            <select id="mySel" class="form-control">
+                        <option data-ng-repeat="item in clientdata" data-ng-selected="item.selected" data-ng-click="clientselected(item)" data-ng-model="item">{{item}}</option>
+                        </select>
+                        </td>  
+                    </tr>  
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <!--<span>Brand</span>  -->
+                        </td>  
+                        <td>  
+                           <!-- <input type="text" id="BrandName" required data-ng-model="BrandName" /> -->
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        
+                         <span class="caret">Brand</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li data-ng-repeat="a in branddata"><a data-ng-click="brandselected(a)">{{a}}</a></li>
+                        </ul>
+                      </div> 
+                        </td>  
+                    </tr>  
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>Estimate No</span>  
+                        </td>  
+                        <td>  
+                            <input type="text" id="EstimateNo" required data-ng-model="EstimateNo" />  
+                        </td>  
+                    </tr> 
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>Current Date</span>  
+                        </td>  
+                        <td>  
+                            <input type="text" id="CurrDate" readonly="readonly" required data-ng-model="CurrDate" />  
+                        </td>  
+                    </tr> 
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>PO No</span>  
+                        </td>  
+                        <td>  
+                            <input type="text" id="PONO" required data-ng-model="PONO" />  
+                        </td>  
+                    </tr> 
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>Date</span>  
+                        </td>  
+                        <td>  
+                            <input type="date" id="EstDate" required data-ng-model="EstDate" />  
+                        </td>  
+                    </tr> 
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>SAC Per:</span>  
+                        </td>  
+                        <td>  
+                            <input type="text" id="SACPer" required data-ng-model="SACPer" />  
+                        </td>  
+                    </tr> 
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>AAC Per:</span>  
+                        </td>  
+                        <td>  
+                            <input type="text" id="AACPer" required data-ng-model="AACPer" />  
+                        </td>  
+                    </tr> 
+
+                    <tr>  
+                        <td></td>  
+                        <td></td>  
+                        <td>  
+                            <input type="button" id="addpub" value="Add Publication" data-ng-click="addpub()" />  
+  
+                         <!--   <input type="button" id="Clear" value="Clear" data-ng-click="clear()" />  -->
+                        </td>  
+                    </tr>  
+                </table>  
+  
+            </td>  
+        </tr>  
+  
+    </table>  
+
+</body>
+</html>

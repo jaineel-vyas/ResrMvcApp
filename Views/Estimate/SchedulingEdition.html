@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <table id="tblContainer" >  
+        
+<tr>  
+            <td>  
+              <!--  <div style="color: red;">{{Message}}</div>  -->
+                <table style="border: solid 4px Red; padding: 2px;">  
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>Scheduled Date</span>  
+                        </td>  
+                        <td>  
+                            <input type="date" id="ScheduleDate"  data-ng-model="ScheduleDate" />  
+                        </td>  
+                    </tr>  
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>Caption</span>  
+                        </td>  
+                        <td>  
+                             <select id="capselect" class="form-control">
+                        <option data-ng-repeat="CaptionName in CaptionNames" data-ng-selected="CaptionName.selected" data-ng-click="captionselected(CaptionName)" data-ng-model="CaptionName">{{CaptionName}}</option>
+                        </select>
+                        </td> 
+                            <!--<input type="text" id="CaptionName" required data-ng-model="CaptionName" />  -->
+                        </td>  
+                    </tr>  
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>Language</span>  
+                        </td>  
+                        <td>  
+                            <input type="text" id="Language" required data-ng-model="Language" />  
+                        </td>  
+                    </tr>  
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>Height</span>  
+                        </td>  
+                        <td>  
+                            <input type="text" id="Height" step="0.01" required data-ng-model="Height" />  
+                        </td>  
+                    </tr>  
+                    
+                     
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>Width</span>  
+                        </td>  
+                        <td>  
+                            <input type="text" id="Width" step="0.01" required data-ng-model="Width" />  
+                        </td>  
+                    </tr> 
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>Total Size</span>  
+                        </td>  
+                        <td>  
+                            <input type="text" id="TotalSize" step="0.01"  readonly="readonly" required data-ng-model="TotalSize" />  
+                        </td>  
+                    </tr> 
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>Rate</span>  
+                        </td>  
+                        <td>  
+                            <input type="text" id="Rate" step="0.01" required data-ng-model="Rate" />  
+                        </td>  
+                    </tr> 
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>No of Insertion</span>  
+                        </td>  
+                        <td>  
+                            <input type="text" id="NoInsertion" step="1" required data-ng-model="NoInsertion" />  
+                        </td>  
+                    </tr> 
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>Total Cost</span>  
+                        </td>  
+                        <td>  
+                            <input type="text" id="TotalCost" step="0.01" readonly="readonly" required data-ng-model="TotalCost" />  
+                        </td>  
+                    </tr> 
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>Avg Discount</span>  
+                        </td>  
+                        <td>  
+                            <input type="text" id="AvgDisc" step="0.01" max="100" min="0" required data-ng-model="AvgDisc" />  
+                        </td>  
+                    </tr> 
+                     <tr>  
+                        <td></td>  
+                        <td>  
+                            <span>Net Cost</span>  
+                        </td>  
+                        <td>  
+                            <input type="text" id="NetCost" step="0.01" required data-ng-model="NetCost" />  
+                        </td>  
+                    </tr> 
+                    <tr>  
+                        <td></td>  
+                        <td></td>  
+                        <td>  
+                            <input type="button" id="addschedule" value="Save" data-ng-click="addschedule()" />  
+  
+                         <!--   <input type="button" id="Clear" value="Clear" data-ng-click="clear()" />  -->
+                        </td>  
+                    </tr>  
+                </table>  
+  
+            </td>  
+        </tr>  
+  
+    </table>  
+
+
+</body>
+</html>

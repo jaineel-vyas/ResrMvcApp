@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfService1" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfService1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfClientMasterContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClientMasterContract" nillable="true" type="tns:ClientMasterContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClientMasterContract" nillable="true" type="tns:ArrayOfClientMasterContract" />
+  <xs:complexType name="ClientMasterContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
+      <xs:element minOccurs="0" name="Client_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClientMasterContract" nillable="true" type="tns:ClientMasterContract" />
+  <xs:complexType name="ArrayOfBrandMasterContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BrandMasterContract" nillable="true" type="tns:BrandMasterContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBrandMasterContract" nillable="true" type="tns:ArrayOfBrandMasterContract" />
+  <xs:complexType name="BrandMasterContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BrandID" type="xs:int" />
+      <xs:element minOccurs="0" name="Brand_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BrandMasterContract" nillable="true" type="tns:BrandMasterContract" />
+  <xs:complexType name="ArrayOfEstimateDataContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EstimateDataContract" nillable="true" type="tns:EstimateDataContract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEstimateDataContract" nillable="true" type="tns:ArrayOfEstimateDataContract" />
+  <xs:complexType name="EstimateDataContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgencyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BrandID" type="xs:int" />
+      <xs:element minOccurs="0" name="CampaignName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
+      <xs:element minOccurs="0" name="EstimateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EstimateNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PeriodFrom" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PeriodTo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="aacper" type="xs:float" />
+      <xs:element minOccurs="0" name="podate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="pono" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sacper" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EstimateDataContract" nillable="true" type="tns:EstimateDataContract" />
+</xs:schema>

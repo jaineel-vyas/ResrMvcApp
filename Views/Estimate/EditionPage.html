@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <table id="mytable" class="table table-striped">
+      <thead>
+        <tr class="table-head">
+          <th>Select</th>
+           <th ng-click="columnname='EstimateName'; sortReverse='!sortReverse'">Edition Name</th>
+            <th ng-click="columnname='Height'; sortReverse='!sortReverse'">Height</th>
+            <th ng-click="columnname='Width'; sortReverse='!sortReverse'">Width</th>
+            <th ng-click="columnname='TotalSize'; sortReverse='!sortReverse'">Total Size</th>
+            <th ng-click="columnname='Rate'; sortReverse='!sortReverse'">Rate</th>
+            <th ng-click="columnname='NoofInsert'; sortReverse='!sortReverse'">No of Insertion</th>
+            <th ng-click="columnname='TotalCost'; sortReverse='!sortReverse'">Total Cost</th>
+            <th ng-click="columnname='AgDiscount'; sortReverse='!sortReverse'">Ag Discount</th>
+            <th ng-click="columnname='NetCost'; sortReverse='!sortReverse'">Net Cost </th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr dir-paginate="edition in  Editions | orderBy: columnname : sortReverse | filter : searchtext | itemsPerPage:5" >
+          <td>{{edition.EstimateName}}</td>
+          <td>{{edition.Height}}</td>
+          <td>{{edition.Width}}</td>
+          <td>{{edition.TotalSize}}</td>
+          <td>{{edition.Rate}}</td>
+          <td>{{edition.NoofInsert}}</td>
+          <td>{{edition.TotalCost}}</td>
+          <td>{{edition.AgDiscount}}</td>
+          <td>{{edition.NetCost}}</td>
+          <td><button onclick="#!/scheduling/edition.EditionId">Scheduling</button></td>
+        </tr>
+      </tbody>
+    </table>
+      <dir-pagination-controls
+       max-size="5"
+       direction-links="true"
+       boundary-links="true" >
+    </dir-pagination-controls> 
+
+</body>
+</html>
