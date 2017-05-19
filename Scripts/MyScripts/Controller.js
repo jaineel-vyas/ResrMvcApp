@@ -3,6 +3,7 @@
 /// <reference path="Modules.js" /> 
 /// <reference path="Services.js" /> 
 
+// controller for add estimate page
 app.controller("AddEstimate_Controller", function ($scope, AngularJs_Service) {
   
     $scope.OperType = 1;
@@ -83,6 +84,7 @@ app.controller("AddEstimate_Controller", function ($scope, AngularJs_Service) {
     }
 });
 
+//controller for scheduling page
 app.controller("Scheduling_Controller", function ($scope, $routeParams, $route, AngularJs_Service) {
     $scope.addschedule = function () {
         var Schedule = {
@@ -116,6 +118,7 @@ app.controller("Scheduling_Controller", function ($scope, $routeParams, $route, 
     }
 });
 
+//controller for landing page of the website
 app.controller("GetEstimates_Controller", function ($scope, AngularJs_Service) {
 
     GetAllRecords();
@@ -138,6 +141,7 @@ app.controller("GetEstimates_Controller", function ($scope, AngularJs_Service) {
     
 });
 
+//controller for editions list page
 app.controller("Editions_Controller", function ($scope, AngularJs_Service) {
 
     var promiseGet = AngularJs_Service.getAllEdition();
@@ -151,23 +155,3 @@ app.controller("Editions_Controller", function ($scope, AngularJs_Service) {
 }
 });
 
-/* app.controller("ClientMasterLoad", function ($scope, AngularJs_Service) {
-
-    var promisemaster = AngularJs_Service.getClientMaster();
-    promisemaster.then(function () {
-        $scope.clientdata = p1.data.ClientName;
-
-    }, function (err) {
-        console.log("Some error occured" + err);
-    });
-});
-
-app.controller("BrandMasterLoad", function ($scope, AngularJs_Service) {
-    var promisemaster1 = AngularJs_Service.getBrandMaster();
-    promisemaster1.then(function () {
-        $scope.branddata = p1.data.BrandName;
-
-    }, function (err) {
-        console.log("Some error occured" + err);
-    });
-});*/
