@@ -12,23 +12,20 @@ var app;
             controller: 'GetEstimates_Controller'
              })
 
-            // route for the about page
+            // route for the add estimate page
             .when('/addestimate', {
                 templateUrl: '//Views/Estimate/addestimate.html',
                 controller: 'AddEstimate_Controller'
             })
             
-            
+            // route for the scheduling page
         .when ('/shceduling/:estimateid',{
             templateUrl: '//View/Estimate/SchedulingEdition.html',
             controller: 'Scheduling_Controller'
         })
+        
         .otherwise({ redirectTo: '/' });
-            // route for the contact page
-            /*.when('/contact', {
-                templateUrl: 'pages/contact.html',
-                controller: 'CRUD_AngularJs_RESTController'
-            });*/
+            
     }]);
 
 })();
