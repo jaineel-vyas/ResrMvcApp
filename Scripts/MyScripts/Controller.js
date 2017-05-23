@@ -138,6 +138,48 @@ app.controller("GetEstimates_Controller", function ($scope, AngularJs_Service) {
     $scope.itemsPerPage = 10;
     $scope.columnname = 'name';
     $scope.sortReverse = false;
+  
+  $scope.generateexcel =function() {
+                  
+        var estdata = $scope.Estimates;
+         var array = typeof estdata != 'object' ? JSON.parse(estdata) : estdata;
+        var str = 'Estimate No,Period From,Period To,Client,Brand,Total Cost, Status\r\n';
+
+        for (var i = 0; i < array.length; i++) {
+            var line = '';
+            for (var index in array[i]) {
+                if (line != '')
+                    line += ','
+
+                line += array[i][index];
+            }
+
+            str += line + '\r\n';
+        }
+
+       var csv = str;
+      
+        var blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+
+        if (navigator.msSaveBlob) { // IE 10+
+            //IE 
+            navigator.msSaveBlob(blob, "ExcelReport.csv")
+        } else {
+            //others 
+            var link = document.createElement("a");
+            if (link.download !== undefined) { // feature detection
+                // Browsers that support HTML5 download attribute
+                var url = URL.createObjectURL(blob);
+                link.setAttribute("href", url);
+                link.setAttribute("download", "ExcelReport.csv");
+                link.style = "visibility:hidden";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+
+    }
     
 });
 
