@@ -139,8 +139,8 @@ app.controller("GetEstimates_Controller", function ($scope, AngularJs_Service) {
     $scope.columnname = 'name';
     $scope.sortReverse = false;
   
-  $scope.generateexcel =function() {
-                  
+  // Function to download the estimate list in excel(csv format)
+  $scope.generateexcel =function() {               
         var estdata = $scope.Estimates;
          var array = typeof estdata != 'object' ? JSON.parse(estdata) : estdata;
         var str = 'Estimate No,Period From,Period To,Client,Brand,Total Cost, Status\r\n';
@@ -156,7 +156,6 @@ app.controller("GetEstimates_Controller", function ($scope, AngularJs_Service) {
 
             str += line + '\r\n';
         }
-
        var csv = str;
       
         var blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
