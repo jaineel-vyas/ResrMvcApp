@@ -4,7 +4,7 @@
 /// <reference path="../angular-route.min.js" />
 var app;
 (function () {
-    app = angular.module("EstimateModule", ["ngRoute", "ui.bootstrap"]).
+    app = angular.module("EstimateModule", ["ngRoute", "ui.bootstrap","angularUtils.directives.dirPagination"]).
     config(['$routeProvider', function ($routeProvider) {
         $routeProvider
         .when('/', {
