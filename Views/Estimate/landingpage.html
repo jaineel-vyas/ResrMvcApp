@@ -38,7 +38,26 @@
        direction-links="true"
        boundary-links="true" >
     </dir-pagination-controls> 
-
+    
+    <!-- Using UI Bootstrap
+    <tr ng-repeat="estimate in  Estimates | orderBy: columnname : sortReverse | filter : { EstimateNo : searchtext}" >
+          <td>{{estimate.EstimateNo}}</td>
+          <td>{{estimate.PeriodFrom}}</td>
+          <td>{{estimate.PeriodTo}}</td>
+          <td>{{estimate.ClientID}}</td>
+          <td>{{estimate.BrandID}}</td>
+          <td>{{estimate.TotalCost}}</td>
+          <td>{{estimate.Status}}</td>
+        </tr>
+      </tbody>
+    </table>
+      <pagination
+       boundary-links="true" total-items="estimatecount"
+       ng-model="currentPage" class="pagination-sm" 
+       previous-text="&lsaquo;" next-text="&rsaquo;" 
+       num-pages="5">
+    </pagination> 
+    -->
 
     <button id="createnew" onclick="createnew()">Create New</button>
 
